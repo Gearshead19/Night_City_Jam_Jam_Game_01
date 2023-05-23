@@ -7,6 +7,8 @@ public class PlayerCharacterController : MonoBehaviour
     [SerializeField] LayerMask groundLayers;
     [SerializeField] private float runSpeed = 0;
     [SerializeField] private float jumpHeight = 2f;
+    [SerializeField] private Transform[] groundChecks;
+    [SerializeField] private Transform[] wallChecks;
 
     private float gravity = -50f;
     private CharacterController characterController;
@@ -35,11 +37,19 @@ public class PlayerCharacterController : MonoBehaviour
         //Face Forward
         transform.forward = new Vector3(horizontalInput, 0, Mathf.Abs(horizontalInput) - 1);
 
-
-
-
         //IsGrounded
-        isGrounded = Physics.CheckSphere(transform.position, 0.1f, groundLayers, QueryTriggerInteraction.Ignore);
+        isGrounded = false;
+
+        foreach (var groundCheck in groundChecks)
+        {
+            if (Physics.CheckSphere(groundCheck.position, 0.1f, groundLayers, QueryTriggerInteraction.Ignore))
+            {
+                isGrounded = true;
+                break;
+            }
+        }
+
+        
 
         if (isGrounded && velocity.y < 0)
         {
@@ -51,7 +61,20 @@ public class PlayerCharacterController : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
         }
 
-        characterController.Move(new Vector3(horizontalInput * runSpeed, 0, 0) * Time.deltaTime);
+        //Wallchecker - Will stop player from getting stuck to a wall
+        var blocked = false;
+        foreach (var wallCheck in wallChecks)
+        {
+            if (Physics.CheckSphere(wallCheck.position, 0.01f, groundLayers, QueryTriggerInteraction.Ignore))
+            {
+                blocked = true;
+                break;
+            }
+        }
+        if (!blocked)
+        {
+            characterController.Move(new Vector3(horizontalInput * runSpeed, 0, 0) * Time.deltaTime);
+        }
 
         if(isGrounded && Input.GetButtonDown("Jump"))
         {
