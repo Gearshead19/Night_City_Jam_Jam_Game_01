@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.UI;
 
 public class PlayerCharacterController : MonoBehaviour
 {
     [SerializeField] LayerMask groundLayers;
     [SerializeField] private float runSpeed = 0;
     [SerializeField] private float jumpHeight = 2f;
+    [SerializeField] private GameObject playerRunSprite;
+    [SerializeField] private GameObject playerJumpSprite;
     [SerializeField] private Transform[] groundChecks;
     [SerializeField] private Transform[] wallChecks;
 
@@ -54,6 +57,8 @@ public class PlayerCharacterController : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = 0;
+            playerRunSprite.SetActive(true);
+            playerJumpSprite.SetActive(false);
         }
         else
         {
@@ -79,8 +84,9 @@ public class PlayerCharacterController : MonoBehaviour
         if(isGrounded && Input.GetButtonDown("Jump"))
         {
             velocity.y += Mathf.Sqrt(jumpHeight * -2 * gravity);
+            playerRunSprite.SetActive(false);
+            playerJumpSprite.SetActive(true);
         }
-
 
         //vertical Velocity
         characterController.Move(velocity * Time.deltaTime);
