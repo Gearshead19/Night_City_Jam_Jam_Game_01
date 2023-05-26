@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class GroundSpawner : MonoBehaviour
 {
+    [Header("Ground Prefabs")]
     public GameObject Ground1, Ground2, Ground3, Ground4, Ground5;
-    bool hasGround = true;
 
+    [Header("Spawn Distance")]
     public int spawnDistance = 0;
 
+    [Header("Spawn Heights")]
+    public float spawnHeight_01 = 0f;
+    public float spawnHeight_02 = 0f;
+    public float spawnHeight_03 = 0f;
+    public float spawnHeight_04 = 0f;
+    public float spawnHeight_05 = 0f;
 
+    bool hasGround = true;
 
     // Start is called before the first frame update
     void Start()
@@ -33,23 +41,23 @@ public class GroundSpawner : MonoBehaviour
 
         if(randomNum == 1)
         {
-            Instantiate(Ground1, new Vector3(transform.position.x + spawnDistance, 0f, 0), Quaternion.identity);
+            Instantiate(Ground1, new Vector3(transform.position.x + spawnDistance, spawnHeight_01, 0), Quaternion.identity);
         }
         if (randomNum == 2)
         {
-            Instantiate(Ground2, new Vector3(transform.position.x + spawnDistance, 1f, 0), Quaternion.identity);
+            Instantiate(Ground2, new Vector3(transform.position.x + spawnDistance, spawnHeight_02, 0), Quaternion.identity);
         }
         if (randomNum == 3)
         {
-            Instantiate(Ground3, new Vector3(transform.position.x + spawnDistance, -1f, 0), Quaternion.identity);
+            Instantiate(Ground3, new Vector3(transform.position.x + spawnDistance, spawnHeight_03, 0), Quaternion.identity);
         }
         if (randomNum == 4)
         {
-            Instantiate(Ground4, new Vector3(transform.position.x + spawnDistance, 2f, 0), Quaternion.identity);
+            Instantiate(Ground4, new Vector3(transform.position.x + spawnDistance, spawnHeight_04, 0), Quaternion.identity);
         }
         if (randomNum == 5)
         {
-            Instantiate(Ground5, new Vector3(transform.position.x + spawnDistance, -2f, 0), Quaternion.identity);
+            Instantiate(Ground5, new Vector3(transform.position.x + spawnDistance, spawnHeight_05, 0), Quaternion.identity);
         }
     }
 

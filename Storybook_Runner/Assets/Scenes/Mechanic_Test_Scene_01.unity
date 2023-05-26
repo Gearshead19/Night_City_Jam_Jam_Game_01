@@ -556,7 +556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508292139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.21, y: 0, z: 0}
+  m_LocalPosition: {x: 19.303, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -580,7 +580,12 @@ MonoBehaviour:
   Ground3: {fileID: 849233255660107479, guid: e53b2984a2b305d46bf0a030b12606f9, type: 3}
   Ground4: {fileID: 2724197589144255591, guid: 92145569640f4fe42bf51d782802f7eb, type: 3}
   Ground5: {fileID: 9094421403696123731, guid: f700ec6527fcb4f4983558c20ed9bcd2, type: 3}
-  spawnDistance: 7
+  spawnDistance: 10
+  spawnHeight_01: 0
+  spawnHeight_02: 1
+  spawnHeight_03: -1
+  spawnHeight_04: 2
+  spawnHeight_05: -2
 --- !u!54 &1508292143
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1057,8 +1062,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1603106736562615560, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603106736562615560, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
