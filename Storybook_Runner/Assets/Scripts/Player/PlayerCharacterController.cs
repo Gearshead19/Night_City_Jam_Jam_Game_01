@@ -18,9 +18,21 @@ public class PlayerCharacterController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     private float horizontalInput;
-    
 
+    private PlayerActionControls playerActionControls;
 
+    private void Awake()
+    {
+        playerActionControls = new PlayerActionControls();
+    }
+    private void OnEnable()
+    {
+        playerActionControls.Enable();
+    }
+    private void OnDisable()
+    {
+        playerActionControls.Disable(); 
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -81,7 +93,7 @@ public class PlayerCharacterController : MonoBehaviour
             characterController.Move(new Vector3(horizontalInput * runSpeed, 0, 0) * Time.deltaTime);
         }
 
-        if(isGrounded && Input.GetButtonDown("Jump"))
+        if(isGrounded && playerActionControls.Land.Jump.triggered)
         {
             velocity.y += Mathf.Sqrt(jumpHeight * -2 * gravity);
             playerRunSprite.SetActive(false);
