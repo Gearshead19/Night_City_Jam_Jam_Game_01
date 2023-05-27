@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class GroundSpawner : MonoBehaviour
 {
+    [Tooltip("These are the prefabs for endless spawning Grounds")]
     [Header("Ground Prefabs")]
     public GameObject Ground1, Ground2, Ground3, Ground4, Ground5;
 
+    [Tooltip("This variable is used to space out the newly spawned in ground prefabs")]
     [Header("Spawn Distance")]
     public int spawnDistance = 0;
 
+    [Tooltip("These are the Heights each individual ground prefab can spawn at")]
     [Header("Spawn Heights")]
     public float spawnHeight_01 = 0f;
     public float spawnHeight_02 = 0f;
