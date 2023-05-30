@@ -44,7 +44,7 @@ public class PlayerCharacterController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
 
-
+        StartCoroutine("IncreaseGameSpeed");
 
     }
 
@@ -119,6 +119,8 @@ public class PlayerCharacterController : MonoBehaviour
         playerRunSprite.SetActive(false);
         playerJumpSprite.SetActive(false);
         playerDeathSprite.SetActive(true);
+        StopCoroutine("IncreaseGameSpeed");
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -132,6 +134,25 @@ public class PlayerCharacterController : MonoBehaviour
             GameOver();
         }
 
+
+    }
+
+    IEnumerator IncreaseGameSpeed()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(10);
+
+            if(runSpeed < 16)
+            {
+                runSpeed += 0.5f;
+            }
+            if (GameObject.Find("GroundSpawner").GetComponent<ObstacleSpawner>().obstacleSpawnInterval > 1)
+            {
+                GameObject.Find("GroundSpawner").GetComponent<ObstacleSpawner>().obstacleSpawnInterval -= 0.1f;
+            }
+            
+        }
 
     }
 
