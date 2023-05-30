@@ -29,24 +29,16 @@ public class PlayerHealth : MonoBehaviour
        healthBar.SetHealth(currentHealth);
         currentHealth = currentHealth - 1;
         
+        if (currentHealth > 10000)
+        {
+            currentHealth = maxHealth;
+        }
         if (currentHealth <= 0)
         {
             player.runSpeed = 0;
             player.GameOver();
         }
     }
-
-
-    void PlayerDead()
-    {
-        if(currentHealth <= 0)
-        {
-            //MenuQuick.ReloadLevel();
-            //SceneManager.LoadScene("GameOver");
-           
-        }
-    }
-  
 
     public void Player_damaged_by_stationary(float damage_done_to_player)
     {
