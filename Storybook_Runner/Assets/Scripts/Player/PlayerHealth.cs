@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
    
 
     public HealthBar healthBar;
+
+    private PlayerCharacterController player;
     
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
        
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-       
+        player = GetComponent<PlayerCharacterController>();
         
     }
 
@@ -26,7 +28,12 @@ public class PlayerHealth : MonoBehaviour
     {
        healthBar.SetHealth(currentHealth);
         currentHealth = currentHealth - 1;
-        PlayerDead();
+        
+        if (currentHealth <= 0)
+        {
+            player.runSpeed = 0;
+            player.GameOver();
+        }
     }
 
 

@@ -1360,7 +1360,7 @@ GameObject:
   - component: {fileID: 1987350330}
   m_Layer: 0
   m_Name: BottomDestroyer
-  m_TagString: Untagged
+  m_TagString: BotttomDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1818,6 +1818,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1397218723, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070241504, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1603106735190847918, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}

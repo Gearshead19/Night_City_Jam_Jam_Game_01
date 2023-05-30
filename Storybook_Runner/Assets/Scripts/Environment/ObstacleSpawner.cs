@@ -31,7 +31,10 @@ public class ObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacterController>().isGameOver)
+        {
+            StopCoroutine("SpawnObstaclesOverTime");
+        }
     }
 
     private void SpawnObstacle()
