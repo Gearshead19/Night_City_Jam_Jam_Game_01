@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.UI;
 using System.Data;
+using TMPro;
 
 public class PlayerCharacterController : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class PlayerCharacterController : MonoBehaviour
     private bool isGrounded;
     private float horizontalInput;
     private ScoreSystem score;
+
+    public GameObject GameOverPanel, scoreText;
+    public TextMeshProUGUI FinalScoreText, HighScoreText;
 
     [Header("Game State")]
     public bool isGameOver = false;
@@ -130,6 +134,8 @@ public class PlayerCharacterController : MonoBehaviour
         score.scoreIsOn = false;
         health.staminaDrain = false;
 
+        StartCoroutine("ShowGameOverPanel");
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -163,6 +169,15 @@ public class PlayerCharacterController : MonoBehaviour
             
         }
 
+    }
+    IEnumerator ShowGameOverPanel()
+    {
+        yield return new WaitForSeconds(2);
+        GameOverPanel.SetActive(true);
+        scoreText.SetActive(false);
+
+        FinalScoreText.text = "Score : " + GameObject.Find("ScoreDetector").GetComponent<ScoreSystem>().score;
+        HighScoreText.text = "High Score : " + PlayerPrefs.GetInt("HighScore");
     }
 
 }
