@@ -3593,6 +3593,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1055367746, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_DeselectOnBackgroundClick
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055367747, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 1035687484}
     - target: {fileID: 1136968399, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
