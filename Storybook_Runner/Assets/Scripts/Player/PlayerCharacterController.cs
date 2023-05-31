@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.UI;
+using System.Data;
 
 public class PlayerCharacterController : MonoBehaviour
 {
@@ -20,11 +21,13 @@ public class PlayerCharacterController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     private float horizontalInput;
+    private ScoreSystem score;
 
     [Header("Game State")]
     public bool isGameOver = false;
 
     private PlayerActionControls playerActionControls;
+    private PlayerHealth health;
 
     private void Awake()
     {
@@ -43,6 +46,8 @@ public class PlayerCharacterController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        score = FindObjectOfType<ScoreSystem>();
+        health = FindObjectOfType<PlayerHealth>();
 
         StartCoroutine("IncreaseGameSpeed");
 
@@ -116,10 +121,14 @@ public class PlayerCharacterController : MonoBehaviour
     public void GameOver()
     {
         isGameOver = true;
+        isGrounded = false;
+        velocity.y = 0;
         playerRunSprite.SetActive(false);
         playerJumpSprite.SetActive(false);
         playerDeathSprite.SetActive(true);
         StopCoroutine("IncreaseGameSpeed");
+        score.scoreIsOn = false;
+        health.staminaDrain = false;
 
     }
 

@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 1000;
     public int HealthPoints = 1000;
     public int currentHealth;
-   
+    public bool staminaDrain;
 
     public HealthBar healthBar;
 
@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        staminaDrain = true;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         player = GetComponent<PlayerCharacterController>();
@@ -27,8 +27,24 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
        healthBar.SetHealth(currentHealth);
-        currentHealth = currentHealth - 1;
+        if (staminaDrain == true)
+        {
+            DraingStamina();
+
+        }
+        else
+        {
+            player.runSpeed = 0;
+            player.GameOver();
+        }
         
+       
+    }
+
+    public void DraingStamina()
+    {
+        currentHealth = currentHealth - 1;
+
         if (currentHealth > 10000)
         {
             currentHealth = maxHealth;
@@ -38,13 +54,7 @@ public class PlayerHealth : MonoBehaviour
             player.runSpeed = 0;
             player.GameOver();
         }
-    }
 
-    public void Player_damaged_by_stationary(float damage_done_to_player)
-    {
-        currentHealth = currentHealth - (int)damage_done_to_player;
-
-        healthBar.SetHealth(currentHealth);
     }
 
 }
