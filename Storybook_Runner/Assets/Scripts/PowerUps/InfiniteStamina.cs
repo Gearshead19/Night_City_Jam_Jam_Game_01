@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class InfiniteStamina : MonoBehaviour
 {
-    public int invincibilityTime;
+    
+
+   
 
     private PlayerHealth health;
 
@@ -12,6 +14,7 @@ public class InfiniteStamina : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         health = FindObjectOfType<PlayerHealth>();
     }
 
@@ -21,18 +24,15 @@ public class InfiniteStamina : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
         {
+            health.staminaDrain = false;
+            health.currentHealth = health.maxHealth;
             Destroy(this.gameObject);
 
-            StartCoroutine("InfiniteStaminaActive");
+            health.StartingTimer();
         }
     }
       
-    IEnumerator InfiniteStaminaActive()
-    {
-        health.currentHealth = 20000;
-        yield return new WaitForSeconds(invincibilityTime);
-
-    }
+   
 
 
 

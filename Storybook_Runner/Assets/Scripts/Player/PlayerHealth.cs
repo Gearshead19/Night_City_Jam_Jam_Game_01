@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public int HealthPoints = 1000;
     public int currentHealth;
     public bool staminaDrain;
+    public int invincibilityTime;
 
     public HealthBar healthBar;
 
@@ -32,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
             DraingStamina();
 
         }
-        else
+        else if (currentHealth <= 0)
         {
             player.runSpeed = 0;
             player.GameOver();
@@ -43,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void DraingStamina()
     {
+        
         currentHealth = currentHealth - 1;
 
         if (currentHealth > 10000)
@@ -54,6 +57,22 @@ public class PlayerHealth : MonoBehaviour
             player.runSpeed = 0;
             player.GameOver();
         }
+
+    }
+    public void StartingTimer()
+    {
+        StartCoroutine("InfiniteStaminaActive");
+    }
+    IEnumerator InfiniteStaminaActive()
+    {
+        if (staminaDrain == false)
+        {
+            
+            yield return new WaitForSeconds(invincibilityTime);
+            
+            staminaDrain = true;
+        }
+
 
     }
 

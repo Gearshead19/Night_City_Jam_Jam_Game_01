@@ -2192,9 +2192,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle1: {fileID: 8517634489588675711, guid: c05323a2b25ffc34bbaeb571b80978af, type: 3}
-  obstacle2: {fileID: 983307286840321439, guid: 00e7db624e80cc743bc6a18b56c86e6b, type: 3}
+  obstacle2: {fileID: 4429481167366204414, guid: d77329d276476074e9658cb8e9100d7f, type: 3}
   obstacle3: {fileID: 2622153347139379198, guid: b1a7fed1f28be3441b93916687144350, type: 3}
-  obstacleSpawnInterval: 2.5
+  obstacleSpawnInterval: 3
   obstacleHeightSpawnIn: 2
 --- !u!1 &1535539353
 GameObject:
@@ -3601,6 +3601,14 @@ PrefabInstance:
       propertyPath: m_FirstSelected
       value: 
       objectReference: {fileID: 1035687484}
+    - target: {fileID: 1055367750, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: maxHealth
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055367750, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: invincibilityTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1136968399, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25

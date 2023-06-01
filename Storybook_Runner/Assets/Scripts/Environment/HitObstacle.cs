@@ -24,8 +24,14 @@ public class HitObstacle : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            health.currentHealth = health.currentHealth - damagePlayer;
-            Destroy(this.gameObject);
+            if(health.staminaDrain == true)
+            {
+                health.currentHealth = health.currentHealth - damagePlayer;
+                Destroy(this.gameObject);
+            }
+            else
+                Destroy(this.gameObject);
+
         }
     }
 
