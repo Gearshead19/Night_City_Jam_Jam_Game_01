@@ -158,7 +158,7 @@ public class PlayerCharacterController : MonoBehaviour
         {
             yield return new WaitForSeconds(10);
 
-            if(runSpeed < 16)
+            if(runSpeed < 20)
             {
                 runSpeed += 0.5f;
             }
