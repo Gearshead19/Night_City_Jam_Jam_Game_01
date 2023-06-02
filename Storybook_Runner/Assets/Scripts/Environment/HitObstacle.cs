@@ -9,7 +9,7 @@ public class HitObstacle : MonoBehaviour
 
     private PlayerHealth health;
 
-
+    private ObstacleHitSFX obstacleHitSFX;
 
 
 
@@ -18,12 +18,14 @@ public class HitObstacle : MonoBehaviour
     void Start()
     {
         health = FindObjectOfType<PlayerHealth>();
+        obstacleHitSFX = FindObjectOfType<ObstacleHitSFX>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            obstacleHitSFX.ObstacleHitSFXPlay();
             if(health.staminaDrain == true)
             {
                 health.currentHealth = health.currentHealth - damagePlayer;
