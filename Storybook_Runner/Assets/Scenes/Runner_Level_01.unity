@@ -3235,7 +3235,7 @@ MonoBehaviour:
   Ground3: {fileID: 849233255660107479, guid: e53b2984a2b305d46bf0a030b12606f9, type: 3}
   Ground4: {fileID: 2724197589144255591, guid: 92145569640f4fe42bf51d782802f7eb, type: 3}
   Ground5: {fileID: 9094421403696123731, guid: f700ec6527fcb4f4983558c20ed9bcd2, type: 3}
-  spawnDistance: 7
+  spawnDistance: 5
   spawnHeight_01: 0
   spawnHeight_02: 1
   spawnHeight_03: -1
@@ -3285,8 +3285,8 @@ MonoBehaviour:
   obstacle1: {fileID: 8517634489588675711, guid: c05323a2b25ffc34bbaeb571b80978af, type: 3}
   obstacle2: {fileID: 4429481167366204414, guid: d77329d276476074e9658cb8e9100d7f, type: 3}
   obstacle3: {fileID: 5154914657239196593, guid: 83a40b12f6efacd40b5444cddc60e5e6, type: 3}
-  obstacleSpawnInterval: 3
-  obstacleHeightSpawnIn: 2
+  obstacleSpawnInterval: 2.5
+  obstacleHeightSpawnIn: 4
 --- !u!1 &1535539353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4942,6 +4942,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 863247872, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 863247872, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1055367747, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
       propertyPath: m_FirstSelected
       value: 
@@ -4950,6 +4958,22 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 908233714}
+    - target: {fileID: 1397218723, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397218723, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994270988, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.369
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994270988, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.259
+      objectReference: {fileID: 0}
     - target: {fileID: 1603106735190847918, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
       propertyPath: m_Name
       value: Player_Main
