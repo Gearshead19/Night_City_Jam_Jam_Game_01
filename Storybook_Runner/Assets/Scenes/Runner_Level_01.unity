@@ -426,6 +426,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1508292142}
+        m_TargetAssemblyTypeName: GroundSpawner, Assembly-CSharp
+        m_MethodName: InbetweenOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   timeInSeconds: 1
 --- !u!1 &33386208
 GameObject:
@@ -992,6 +1004,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1508292142}
+        m_TargetAssemblyTypeName: GroundSpawner, Assembly-CSharp
+        m_MethodName: LightOn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3180,9 +3204,9 @@ GameObject:
   - component: {fileID: 1508292141}
   - component: {fileID: 1508292140}
   - component: {fileID: 1508292143}
-  - component: {fileID: 1508292142}
   - component: {fileID: 1508292144}
   - component: {fileID: 1508292145}
+  - component: {fileID: 1508292142}
   m_Layer: 0
   m_Name: GroundSpawner
   m_TagString: Untagged
@@ -3210,8 +3234,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508292139}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.14, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.55, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3235,12 +3259,25 @@ MonoBehaviour:
   Ground3: {fileID: 849233255660107479, guid: e53b2984a2b305d46bf0a030b12606f9, type: 3}
   Ground4: {fileID: 2724197589144255591, guid: 92145569640f4fe42bf51d782802f7eb, type: 3}
   Ground5: {fileID: 9094421403696123731, guid: f700ec6527fcb4f4983558c20ed9bcd2, type: 3}
+  Ground6: {fileID: 347008097474737079, guid: 92d581b605a31134abca85f93f89400e, type: 3}
+  Ground7: {fileID: 2656931834253172770, guid: 08ae8830a4097af4da44186928ab6485, type: 3}
+  Ground8: {fileID: 849233255660107479, guid: 66454e4391fa51c49b14839b7abcd2bc, type: 3}
+  Ground9: {fileID: 2724197589144255591, guid: b14f4ad8b982b54469bea2600c3a93b9, type: 3}
+  Ground10: {fileID: 9094421403696123731, guid: 04007c8cda7816f47b9b6e31e91fcf9a, type: 3}
+  Ground11: {fileID: 347008097474737079, guid: 0b9afbaefe397d44e94ae20b1e21ad52, type: 3}
+  Ground12: {fileID: 2656931834253172770, guid: cba2987626907954f8f17df6a45567f4, type: 3}
+  Ground13: {fileID: 849233255660107479, guid: 73ca1346ef8694c42bd869698563dd3e, type: 3}
+  Ground14: {fileID: 2724197589144255591, guid: 287af0a73226cf14f807b3e8aeac5660, type: 3}
+  Ground15: {fileID: 9094421403696123731, guid: 8ba9fb25dd9c8c94db51ba896f592326, type: 3}
   spawnDistance: 5
   spawnHeight_01: 0
   spawnHeight_02: 1
   spawnHeight_03: -1
   spawnHeight_04: 2
   spawnHeight_05: -2
+  darkGround: 1
+  inBetweenGround: 0
+  lightGround: 0
 --- !u!54 &1508292143
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4885,6 +4922,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 288571445}
     m_Modifications:
+    - target: {fileID: 347008097474737076, guid: f72f6a33b1a703744a1a90758f25f77e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3c77ef6d49c7634794e2fdc7ce872d5, type: 2}
     - target: {fileID: 347008097474737078, guid: f72f6a33b1a703744a1a90758f25f77e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4974,6 +5015,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.259
       objectReference: {fileID: 0}
+    - target: {fileID: 2070241504, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_Name
+      value: Hopps_Tired
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070241504, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070241505, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070241505, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070241505, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070241506, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: db908566e7a8a7e4780c3064ef39f19d, type: 3}
     - target: {fileID: 1603106735190847918, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
       propertyPath: m_Name
       value: Player_Main
@@ -5037,6 +5102,14 @@ PrefabInstance:
     - target: {fileID: 1603106735190847953, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603106736164979624, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_Name
+      value: Hopps_Running
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817481198584101512, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}
+      propertyPath: m_Name
+      value: Hopps_Jump
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb7733aa493320d4f90e9849e9504a4f, type: 3}

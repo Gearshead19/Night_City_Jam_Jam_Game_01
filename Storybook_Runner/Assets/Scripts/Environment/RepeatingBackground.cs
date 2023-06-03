@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RepeatingBackground : MonoBehaviour
 {
-    public GameObject camera;
+    public new GameObject camera;
     [Tooltip("This variable controls the speed of the moving background, best to have it slower than Player so it looks like a parallax effect")]
     [Header("Parallax Effect Speed")]
     public float parallaxEffect;

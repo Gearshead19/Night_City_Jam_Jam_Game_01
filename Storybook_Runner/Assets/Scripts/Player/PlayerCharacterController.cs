@@ -167,6 +167,7 @@ public class PlayerCharacterController : MonoBehaviour
                 GameObject.Find("GroundSpawner").GetComponent<ObstacleSpawner>().obstacleSpawnInterval -= 0.1f;
             }
             
+
         }
 
     }
