@@ -30,7 +30,7 @@ public class ScoreSystem : MonoBehaviour
             if (PlayerPrefs.GetInt("HighScore") < score)
             {
                 PlayerPrefs.SetInt("HighScore", score);
-                Debug.Log("New High Score is " + score);
+                //Debug.Log("New High Score is " + score);
             }
         }
 

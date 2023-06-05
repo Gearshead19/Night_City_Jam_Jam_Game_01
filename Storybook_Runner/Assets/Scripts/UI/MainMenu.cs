@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HighScoreText.text = "High Score : " + PlayerPrefs.GetInt("HighScore");
+        HighScoreText.text = "  " + PlayerPrefs.GetInt("HighScore");
     }
 
     public void LoadMainMenu()
