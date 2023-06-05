@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class InfiniteStamina : MonoBehaviour
 {
-    
 
-   
 
+
+    private InfiniteSFX pickUpSFX;
     private PlayerHealth health;
-
+  
 
     // Start is called before the first frame update
     void Start()
     {
 
         health = FindObjectOfType<PlayerHealth>();
+        pickUpSFX = FindObjectOfType<InfiniteSFX>();
+        
     }
 
 
@@ -26,6 +28,8 @@ public class InfiniteStamina : MonoBehaviour
         {
             health.staminaDrain = false;
             health.currentHealth = health.maxHealth;
+            pickUpSFX.InfinitePickUpSFXPlay();
+      
             Destroy(this.gameObject);
 
             health.StartingTimer();

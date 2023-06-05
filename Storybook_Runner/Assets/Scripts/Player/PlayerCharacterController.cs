@@ -23,6 +23,8 @@ public class PlayerCharacterController : MonoBehaviour
     private float horizontalInput;
     private ScoreSystem score;
 
+    private AudioSource jumpSFX;
+
     public GameObject GameOverPanel, scoreText;
     public TextMeshProUGUI FinalScoreText, HighScoreText;
 
@@ -51,6 +53,7 @@ public class PlayerCharacterController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         score = FindObjectOfType<ScoreSystem>();
         health = FindObjectOfType<PlayerHealth>();
+        jumpSFX = GetComponent<AudioSource>();
 
         StartCoroutine("IncreaseGameSpeed");
 
@@ -114,6 +117,7 @@ public class PlayerCharacterController : MonoBehaviour
             velocity.y += Mathf.Sqrt(jumpHeight * -2 * gravity);
             playerRunSprite.SetActive(false);
             playerJumpSprite.SetActive(true);
+            jumpSFX.Play();
         }
 
         //vertical Velocity
