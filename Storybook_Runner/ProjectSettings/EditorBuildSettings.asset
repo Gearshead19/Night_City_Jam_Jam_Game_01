@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Runner_Level_01.unity
     guid: 3897cd14528b4b946b4b8c1a9dd34f1a
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: f82d3f0c0e495d04987f1214b9b1955a
+  - enabled: 1
+    path: Assets/Scenes/ArtGallery.unity
+    guid: 8f835ba2810ef7d4fb13172cb4615eb2
   m_configObjects: {}
