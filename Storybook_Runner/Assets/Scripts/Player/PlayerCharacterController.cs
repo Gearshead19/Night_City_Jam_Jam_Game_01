@@ -23,6 +23,8 @@ public class PlayerCharacterController : MonoBehaviour
     private float horizontalInput;
     private ScoreSystem score;
 
+    private AudioDamper audioDamp;
+
     private AudioSource jumpSFX;
 
     public GameObject GameOverPanel, scoreText;
@@ -54,6 +56,7 @@ public class PlayerCharacterController : MonoBehaviour
         score = FindObjectOfType<ScoreSystem>();
         health = FindObjectOfType<PlayerHealth>();
         jumpSFX = GetComponent<AudioSource>();
+        audioDamp = FindObjectOfType<AudioDamper>();
 
         StartCoroutine("IncreaseGameSpeed");
 
@@ -136,6 +139,7 @@ public class PlayerCharacterController : MonoBehaviour
         StopCoroutine("IncreaseGameSpeed");
         score.scoreIsOn = false;
         health.staminaDrain = false;
+        audioDamp.AudioLower();
 
         StartCoroutine("ShowGameOverPanel");
         
