@@ -133,7 +133,7 @@ public class PlayerCharacterController : MonoBehaviour
         isGameOver = true;
         isGrounded = false;
         //velocity.y = 0;
-
+        groundLayers = 0;
         playerRunSprite.SetActive(false);
         playerJumpSprite.SetActive(false);
         playerDeathSprite.SetActive(true);
