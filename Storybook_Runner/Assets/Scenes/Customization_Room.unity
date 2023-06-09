@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 250726198}
   - component: {fileID: 250726200}
   - component: {fileID: 250726199}
+  - component: {fileID: 250726201}
   m_Layer: 5
   m_Name: Hopps_Front_View
   m_TagString: Untagged
@@ -641,6 +642,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250726197}
   m_CullTransparentMesh: 1
+--- !u!114 &250726201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250726197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d2d5eb8a4597f43887ca2c6e760854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &260205892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,9 +3484,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1193491676}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ExitGame
+      - m_Target: {fileID: 349384874}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3483,13 +3496,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 349384874}
+      - m_Target: {fileID: 250726197}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
