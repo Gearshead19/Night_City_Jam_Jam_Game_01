@@ -1056,11 +1056,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Game Producer/Lead Artist \u2013 \nDenice Carrera\r\n\nGame Designer/Programmer
-    \u2013 \nJose Miguel Villafranca\r\n\nAudio \u2013 \nMain Menu/Light World Theme/CorruptShardHit,
-    StaminaUp SFXs\u2013 Gilbert Marin\r\n\nPromotion Materials -\n Madelyn Carrera
-    \n\nTwinkle/Sparkle SFX by ShidenBeatsMusic from Pixabay\r\n\nButtonPressSFX,
-    JumpSFX, PageFlip,Pop provided by Pixalbay\r\n\r\nSpecial Thanks\r\nTo our Families
-    for Support\r\n\nMusic provided by The Darkhorse Collective\r\n\r\n\n"
+    \u2013 \nJose Miguel Villafranca\r\n\nAudio \u2013 \nMain Menu/Light World Theme/Art
+    Gallery Theme, CorruptShardHit, StaminaUp SFXs\u2013 Gilbert Marin\r\n\nTwinkle/Sparkle
+    SFX by ShidenBeatsMusic from Pixabay\r\n\nButtonPressSFX, JumpSFX, PageFlip,Pop
+    provided by Pixalbay\r\n\r\nSpecial Thanks\r\nTo our Families for Support\r\n\nMusic
+    provided by The Darkhorse Collective\r\n\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1087,8 +1087,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19
-  m_fontSizeBase: 19
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
