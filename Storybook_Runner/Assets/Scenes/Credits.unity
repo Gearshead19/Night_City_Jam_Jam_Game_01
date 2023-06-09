@@ -1032,7 +1032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.101, y: 0.003, z: -3.353}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -171}
+  m_AnchoredPosition: {x: -4, y: -155}
   m_SizeDelta: {x: 424.5618, y: 723.5756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1089625378
@@ -1055,12 +1055,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Director/Programmer \u2013 Jose Miguel Villafranca\r\nGame Producer/Lead
-    Artist \u2013 Denice Carrera\r\nAudio \u2013 Main Menu/Light World Theme/CorruptShardHit,
-    StaminaUp SFXs \u2013 Gilbert Marin\r\nTwinkle/Sparkle SFX by ShidenBeatsMusic
-    from Pixabay\r\nButtonPressSFX, JumpSFX, PageFlip,Pop provided by Pixalbay\r\n\r\nSpecial
-    Thanks\r\nTo our Families for Support\r\n\r\nMusic provided by The Darkhorse
-    Collective\r\n"
+  m_text: "Game Producer/Lead Artist \u2013 \nDenice Carrera\r\n\nGame Designer/Programmer
+    \u2013 \nJose Miguel Villafranca\r\n\nAudio \u2013 \nMain Menu/Light World Theme/CorruptShardHit,
+    StaminaUp SFXs\u2013 Gilbert Marin\r\n\nPromotion Materials -\n Madelyn Carrera
+    \n\nTwinkle/Sparkle SFX by ShidenBeatsMusic from Pixabay\r\n\nButtonPressSFX,
+    JumpSFX, PageFlip,Pop provided by Pixalbay\r\n\r\nSpecial Thanks\r\nTo our Families
+    for Support\r\n\nMusic provided by The Darkhorse Collective\r\n\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1087,8 +1087,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 178.87857}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
